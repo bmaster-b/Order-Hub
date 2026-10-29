@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+    
+        <style>
+html, body {
+  font-family: sans-serif;
+  background-image: url("https://img.magnific.com/premium-photo/humaninsect-hybrid-jedi-robes-holding-blaster_1273914-41540.jpg?semt=ais_hybrid&w=740&q=80");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+}
+
+            .container {
+  background-image: linear-gradient(to right, rgba(50, 50, 50, 0.8), rgba(55, 40, 30, 0.6));
+  padding: 40px;
+  border-radius: 20px;
+  border: none; 
+  box-shadow: 
+    0 0 20px rgba(0, 0, 0, 0.5),           
+    inset 0 0 0 4px rgba(1, 11, 1, 0.395);  
+  color: white;
+  width: 1000px;
+  height: 400px;
+  position: relative;
+  letter-spacing: 2px;
+  display: flex;
+  flex-direction: column;    /* Zet de links onder elkaar */
+  justify-content: center;   /* Centreert verticaal (indien er hoogte over is) */
+  align-items: center;       /* Centreert de links horizontaal in het midden */
+  text-align: center;        /* Zorgt dat de tekst binnen de link ook centreert */
+}
+
+.container h1 {
+  letter-spacing: 4px;
+  text-shadow: 2px 2px 0px #000;
+}
+
+a {
+  color: rgba(255, 255, 255, 1);
+  font-weight: bold;
+  text-decoration: none; /* Verwijdert de strepen die glitches veroorzaken */
+  display: inline-flex;  /* Zorgt dat icoon en tekst perfect op één lijn staan */
+  align-items: center;
+}
+
+a:hover {
+  color: #0814bd; /* Verandert naar Jedi groen bij hover */
+  text-shadow: 0 0 10px rgba(18, 6, 185, 0.6); 
+  transition: 0.2s; 
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.music-btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background: rgba(55, 40, 30, 0.6);
+  border: 2px solid rgba(1, 11, 1, 0.395);
+  color: white;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  line-height: 1;
+  font-size: 20px;
+  transition: 0.3s;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+}
+
+.music-btn.playing {
+  animation: bounce 0.6s infinite ease-in-out;
+  border-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 15px rgba(55, 40, 30, 0.6);
+}
+
+#music-time {
+  color: rgba(55,  40, 30, 1);
+  font-family: monospace;
+  position: fixed;
+  top: 70px;
+  left: 20px;
+  z-index: 9999;
+  text-shadow: 1px 1px 2px black;
+}
+
+
+ </style>
+<body>
+    
+    <div class="container">
+
+    
+        <p>
+            <a href="https://docs.google.com/document/d/1C3u3gjtVJx-ClGVhw5JZi3Kn3FFGUPK6JjAdWHKbpqg/edit?tab=t.w1pmlvpg4cam" target="_blank">
+                <img src="https://tr.rbxcdn.com/180DAY-86bfb7d9595cf172ff45d244bf4ee781/150/150/Image/Webp/noFilter"
+                style="width: 20px; vertical-align: middle; margin-right: 8px;">
+                Click here to enter the Codex!              
+            </a>        
+        </p>
+
+        <p>
+            <a href="https://docs.google.com/document/d/1ahML3jSph1JSv5_bTDDLpwEcxgkTTeFC9Fk7y0jCNds/edit?tab=t.l5vw53aniq1b" target="_blank">
+                <img src="https://tr.rbxcdn.com/180DAY-86bfb7d9595cf172ff45d244bf4ee781/150/150/Image/Webp/noFilter"
+                style="width: 20px; vertical-align: middle; margin-right: 8px;">
+                Click here to enter the Training Guides!   
+            </a>
+        </p>
+
+        <p>
+            <a href="https://docs.google.com/spreadsheets/d/1ez0XCaBFUmmtEPSCsq0UwaMjALWkCL0zd1E_CaBmqhk/edit?gid=855584882#gid=855584882" target="_blank">
+                <img src="https://tr.rbxcdn.com/180DAY-86bfb7d9595cf172ff45d244bf4ee781/150/150/Image/Webp/noFilter"
+                style="width: 20px; vertical-align: middle; margin-right: 8px;">
+                Click here to enter the academy database!
+            </a>
+        </p>
+
+        <p>
+            <a href="https://docs.google.com/spreadsheets/d/1ZKQVgok8HiZjWRB6huMTgnZ2Wdccta0zXWGw1KUOIBo/edit?gid=0#gid=0" target="_blank">
+                <img src="https://tr.rbxcdn.com/180DAY-86bfb7d9595cf172ff45d244bf4ee781/150/150/Image/Webp/noFilter"
+                style="width: 20px; vertical-align: middle; margin-right: 8px;">
+                Click here to enter the Table of Penalties!
+            </a>
+        </p>
+
+        <p>
+            <a href="https://docs.google.com/document/d/1Vpsl-O4t20KnFUR6NlB7jmWe-Fa1nlb7BwMjS93VCOE/edit?tab=t.0" target="_blank">
+                <img src="https://tr.rbxcdn.com/180DAY-86bfb7d9595cf172ff45d244bf4ee781/150/150/Image/Webp/noFilter"
+                style="width: 20px; vertical-align: middle; margin-right: 8px;">
+                Click here to enter the JI handbook!
+            </a>
+        </p>
+
+
+    </div>
+     
+    <audio id="bg-music" loop>
+    <source src="https://static.wikia.nocookie.net/starwars/images/c/cc/MainTitle.flac/revision/latest?cb=20250411190700" type="audio/flac">
+  </audio>
+
+  <button id="play-btn" onclick="playMusic()" class="music-btn">🎵</button>
+  <span id="music-time">0:00</span>
+  
+<script>
+  window.onload = function() {
+    const audio = document.getElementById("bg-music");
+    const btn = document.getElementById("play-btn");
+    const timeDisplay = document.getElementById("music-time");
+
+
+    window.playMusic = function() {
+      if (audio.paused) {
+        audio.play().then(() => {
+          btn.classList.add("playing");
+        }).catch(err => {
+          console.log("Muziek kon niet starten:", err);
+        });
+      } else {
+        audio.pause();
+        audio.currentTime = 0;
+        btn.classList.remove("playing");
+        timeDisplay.innerText = "0:00";
+      }
+    };
+
+  
+    audio.addEventListener('timeupdate', () => {
+      const mins = Math.floor(audio.currentTime / 60);
+      const secs = Math.floor(audio.currentTime % 60);
+      timeDisplay.innerText = mins + ":" + secs.toString().padStart(2, '0');
+    });
+  };
+  // --- Link Preview Removal Code ---
+    document.querySelectorAll('.no-preview').forEach(link => {
+      // Temporarily store original href destination
+      const originalUrl = link.getAttribute('href');
+      
+      // Strip href on hover so browser status bar remains blank
+      link.addEventListener('mouseover', function() {
+        this.removeAttribute('href');
+      });
+
+      // Restore href if mouse exits link boundary
+      link.addEventListener('mouseout', function() {
+        this.setAttribute('href', originalUrl);
+      });
+
+      // Navigate to destination on click via background JavaScript
+      link.addEventListener('click', function(e) {
+        e.preventDefault(); 
+        window.open(originalUrl, '_blank'); 
+      });
+    });
+</script>
+    </body>
+</html>
